@@ -41,7 +41,7 @@ export function Chatbot() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('https://gemini-serverless-function.vercel.app/api', {
+	    const response = await fetch('http://158.180.46.221:3000/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
