@@ -41,7 +41,7 @@ export function Chatbot() {
     setIsLoading(true)
 
     try {
-    const response = await fetch('https://huuuh.duckdns.org:3000/api/chat', {
+    const response = await fetch('https://huuuh.duckdns.org/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
