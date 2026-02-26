@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-primary: hsl(39.26 44% 64%);
+	--color-secondary: hsl(200 13% 23%);
+	--color-background: var(--background);
+	--color-background-dark: var(--background-dark);
+	--color-background-light: var(--background-light);
+}
+
+@layer base {
+	:root {
+		--background-light: hsl(0 0% 100%);
+		--background: hsl(0 0% 95%);
+		--background-dark: hsl(0 0% 90%);
+	}
+
+	.dark {
+		--background-dark: hsl(0 0% 0%);
+		--background: hsl(0 0% 5%);
+		--background-light: hsl(0 0% 10%);
+	}
+
+	::-moz-selection {
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+	}
+
+	::selection {
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+	}
+
+	body {
+		@apply bg-background;
+		font-family: sans-serif;
+	}
+
+	a,
+	button {
+		cursor: none;
+	}
+
+	html,
+	.scrollbar-hidden {
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	html::-webkit-scrollbar,
+	.scrollbar-hidden::-webkit-scrollbar {
+		display: none;
+	}
+}

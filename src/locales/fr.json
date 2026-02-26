@@ -1,0 +1,60 @@
+{
+	"nav": {
+		"about": "À propos",
+		"experience": "Expérience",
+		"projects": "Projets",
+		"contact": "Contact"
+	},
+	"hero": {
+		"title": "Meski Mohammed",
+		"subtitle": "Développeur Web Full-Stack",
+		"description": "Développeur full-stack passionné créant des solutions web performantes avec les technologies modernes.",
+		"cta": "Voir Mon Travail"
+	},
+	"about": {
+		"title": "À Propos de Moi",
+		"description": "Je suis un développeur web full-stack passionné avec une expertise en technologies front-end et back-end. Avec une expérience pratique des frameworks modernes et des technologies cloud, je suis rigoureux, curieux et motivé à rejoindre une équipe dynamique où je peux appliquer mes compétences et contribuer à des projets innovants.",
+		"interests": "Centres d'intérêt",
+		"interestsList": ["Jeux vidéo", "Apprentissage autodidacte", "Résolution de problèmes", "Collaboration d'équipe"]
+	},
+	"experience": {
+		"title": "Expérience",
+		"internship1": {
+			"title": "Stage PFE",
+			"company": "RYD Mediatech",
+			"period": "Avr 2024 - Mai 2024",
+			"description": "Développement d'un site web de gestion RH impliquant la manipulation de données sensibles et la gestion de flux documentaires."
+		},
+		"internship2": {
+			"title": "Stage de Perfectionnement",
+			"company": "RYD Mediatech",
+			"period": "Août 2024 - Actuellement",
+			"description": "Développement complet du site web Madani Quran Award, une plateforme internationale de concours quranique intégrant l'inscription en ligne, la gestion des candidats et le suivi en temps réel."
+		}
+	},
+	"skills": {
+		"title": "Compétences",
+		"frontend": "Frontend",
+		"backend": "Backend",
+		"tools": "Outils & Plateformes",
+		"frontendSkills": ["React", "Next.js", "Angular", "TypeScript", "Tailwind CSS", "GSAP"],
+		"backendSkills": ["Node.js", "Express", "NestJS", "Laravel", "Livewire", "Python"],
+		"toolsSkills": ["MySQL", "MongoDB", "Google Cloud", "Git", "HTML", "CSS", "Java", "C/C++"]
+	},
+	"projects": {
+		"title": "Projets",
+		"viewProject": "Voir le Projet"
+	},
+	"contact": {
+		"title": "Me Contacter",
+		"description": "N'hésitez pas à me contacter pour des collaborations ou simplement pour dire bonjour.",
+		"email": "Email",
+		"phone": "Téléphone",
+		"social": "Liens Sociaux",
+		"downloadResume": "Télécharger le CV"
+	},
+	"footer": {
+		"copyright": "Tous droits réservés.",
+		"madeWith": "Créé avec React, Tailwind & GSAP"
+	}
+}

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-import { useLanguage } from '../contexts/LanguageContext'
 import { MessageCircle, X, Send } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 interface Message {
   id: string
@@ -9,8 +9,8 @@ interface Message {
   timestamp: Date
 }
 
-export function Chatbot() {
-  const { language } = useLanguage()
+export default function Chatbot() {
+  const { i18n : {language} } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
@@ -93,13 +93,13 @@ export function Chatbot() {
       {isOpen && (
         <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[500px] bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-2xl flex flex-col z-50 backdrop-blur-md">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-accent p-4 rounded-t-2xl">
+          <div className="bg-linear-to-r from-primary to-accent p-4 rounded-t-2xl">
             <h3 className="text-white font-bold text-lg">Meski's AI Assistant</h3>
             <p className="text-white/80 text-sm">Ask me anything about my work</p>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-zinc-900">
+          <div className="flex-1 overflow-y-auto scrollbar-hidden p-4 space-y-4 bg-gray-50 dark:bg-zinc-900">
             {messages.length === 0 && (
               <div className="flex items-center justify-center h-full text-center">
                 <div>

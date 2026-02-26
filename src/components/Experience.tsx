@@ -1,29 +1,29 @@
-import { useLanguage } from '../contexts/LanguageContext'
 import { Briefcase } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-export function Experience() {
-  const { t } = useLanguage()
+export default function Experience() {
+  const { t } = useTranslation()
 
   const experiences = [
     {
-      title: t.experience.internship1.title,
-      company: t.experience.internship1.company,
-      period: t.experience.internship1.period,
-      description: t.experience.internship1.description,
+      title: t('experience.internship1.title'),
+      company: t('experience.internship1.company'),
+      period: t('experience.internship1.period'),
+      description: t('experience.internship1.description'),
     },
     {
-      title: t.experience.internship2.title,
-      company: t.experience.internship2.company,
-      period: t.experience.internship2.period,
-      description: t.experience.internship2.description,
+      title: t('experience.internship2.title'),
+      company: t('experience.internship2.company'),
+      period: t('experience.internship2.period'),
+      description: t('experience.internship2.description'),
     },
   ]
 
   return (
     <section id="experience" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-center">
-          {t.experience.title}
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-linear-to-r from-primary to-accent bg-clip-text text-transparent text-center">
+          {t('experience.title')}
         </h2>
 
         <div className="space-y-8">

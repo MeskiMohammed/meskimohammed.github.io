@@ -1,8 +1,8 @@
-import { useLanguage } from '../contexts/LanguageContext'
 import { Github } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-export function Projects() {
-  const { t } = useLanguage()
+export default function Projects() {
+  const { t } = useTranslation()
 
   const projects = [
     {
@@ -28,8 +28,8 @@ export function Projects() {
   return (
     <section id="projects" className="py-20 px-4 bg-gray-50 dark:bg-zinc-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-center">
-          {t.projects.title}
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-linear-to-r from-primary to-accent bg-clip-text text-transparent text-center">
+          {t('projects.title')}
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
