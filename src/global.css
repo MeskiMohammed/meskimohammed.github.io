@@ -1,26 +1,35 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--color-primary: hsl(39.26 44% 64%);
-	--color-secondary: hsl(200 13% 23%);
-	--color-background: var(--background);
-	--color-background-dark: var(--background-dark);
-	--color-background-light: var(--background-light);
+	/* Primary Branding */
+	--color-primary: #d5922d;
+	--color-primary-content: #ffffff;
+
+	--color-secondary: #1b263b;
+	--color-secondary-content: #e0e1dd;
+
+	/* Semantic Surface Colors - Linked to variables below */
+	--color-background: var(--bg-main);
+	--color-background-surface: var(--bg-surface);
+	--color-text-main: var(--text-main);
+
+	/* Borders & Accents */
+	--color-border: color-mix(in srgb, var(--color-primary), transparent 80%);
 }
 
 @layer base {
 	:root {
-		--background-light: hsl(0 0% 100%);
-		--background: hsl(0 0% 95%);
-		--background-dark: hsl(0 0% 90%);
+		--bg-main: #ffffff; /* Pure white background */
+		--bg-surface: #f8f9fa; /* Off-white for cards/sections */
+		--text-main: #1b263b; /* Deep navy text for readability */
 	}
 
 	.dark {
-		--background-dark: hsl(0 0% 0%);
-		--background: hsl(0 0% 5%);
-		--background-light: hsl(0 0% 10%);
+		--bg-main: #0d131d; /* Deepest navy background */
+		--bg-surface: #161e2b; /* Slightly lighter navy for cards */
+		--text-main: #e0e1dd; /* Soft white text */
 	}
 
 	::-moz-selection {
